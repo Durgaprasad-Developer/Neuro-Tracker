@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Form</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <div class="form-container">
+    <div id="form-step-1" class="form-step">
+      <h1>Sign Up</h1>
+      <p>Please provide your details to proceed</p>
+      <input type="text" id="name" placeholder="Your Name" />
+      <input type="email" id="email" placeholder="Your Email" />
+      <input type="password" id="password" placeholder="Your Password" />
+      <button id="next-btn-1">Next</button>
+    </div>
+
+    <div id="form-step-2" class="form-step hidden">
+      <h1>Tell Us About Yourself</h1>
+      <p>Answer the following questions</p>
+
+      <div class="question">
+        <label for="goals">What are your goals?</label>
+        <input type="text" id="goals" placeholder="Your Goals"/>
+      </div>
+
+      <div class="question">
+        <label for="hobbies">What are your hobbies?</label>
+        <input type="text" id="hobbies" placeholder="Your Hobbies"/>
+      </div>
+
+      <div class="question">
+        <label for="how-can-help">How can Neuro Tracker help you?</label>
+        <input type="text" id="how-can-help" placeholder="Your answer"/>
+      </div>
+
+      <!-- New Questions about Productivity and Behavior -->
+      <div class="question">
+        <label for="productivity">How would you rate your current productivity level?</label>
+        <select id="productivity">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="biggest-challenge">What is the biggest challenge you face in staying productive?</label>
+        <input type="text" id="biggest-challenge" placeholder="Your biggest challenge"/>
+      </div>
+
+      <div class="question">
+        <label for="learning-preference">How do you prefer to learn new topics?</label>
+        <select id="learning-preference">
+          <option value="visual">Visual (Images, videos)</option>
+          <option value="auditory">Auditory (Listening, podcasts)</option>
+          <option value="kinesthetic">Kinesthetic (Hands-on, practical)</option>
+          <option value="reading-writing">Reading/Writing (Text-based)</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="improve-focus">What helps you stay focused and engaged while studying?</label>
+        <input type="text" id="improve-focus" placeholder="Your tips or techniques"/>
+      </div>
+
+      <div class="question">
+        <label for="motivation-level">How motivated do you feel to reach your goals?</label>
+        <select id="motivation-level">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="time-management">How confident are you in managing your time effectively?</label>
+        <select id="time-management">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+
+      <button id="submit-btn">Submit</button>
+    </div>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>

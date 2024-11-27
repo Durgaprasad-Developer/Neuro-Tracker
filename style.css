@@ -1,0 +1,230 @@
+:root {
+    --primary-color: #3B82F6;
+    --secondary-color: #10B981;
+    --bg-color: #F3F4F6;
+    --text-color: #1F2937;
+    --white: #FFFFFF;
+    --gray: #E5E7EB;
+    --light-gray: #F9FAFB;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure the profile icon stays within the container */
+}
+
+/* Profile Icon Styles */
+.profile-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.profile-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Live Date Section */
+#liveDate {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Task Input Section */
+.task-input {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.task-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.task-input button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task-input button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Task List Section */
+.task-list {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Chart Container */
+.chart-container {
+    margin-top: 30px;
+    text-align: center;
+    height: 500px;
+    background-color: var(--light-gray);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#lineChart {
+    width: 800px;
+    height: 400px;
+}
+
+/* Task Styles */
+.task {
+    background-color: var(--light-gray);
+    border: 1px solid var(--gray);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.delete-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Task Progress Styles */
+.task-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.task-progress input[type="range"] {
+    flex-grow: 1;
+}
+
+/* AI Suggestions Styles */
+.ai-suggestions {
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid var(--gray);
+}
+
+.ai-suggestions strong {
+    color: var(--primary-color);
+}
+
+/* Task Meta Information */
+.task-meta {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.task-meta label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.task-meta select,
+.task-meta textarea {
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    background-color: var(--white);
+    font-size: 0.9rem;
+    color: var(--text-color);
+    resize: none;
+}
+
+.task-meta textarea {
+    height: 60px;
+}
+
+.task-meta select:hover,
+.task-meta textarea:hover {
+    border-color: var(--primary-color);
+}
+
+.task-meta select:focus,
+.task-meta textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .task-meta {
+        flex-direction: column;
+    }
+
+    .task-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .delete-btn {
+        align-self: flex-start;
+    }
+}

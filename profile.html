@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<h1 id="name">Hello Durga prasad</h1>
+    <!-- Navigation / Dropdown -->
+    <nav>
+        <ul>
+            <li><button onclick="showDaily()">Daily Progress</button></li>
+            <li><button onclick="showWeekly()">Weekly Progress</button></li>
+            <li><button onclick="showMonthly()">Monthly Progress</button></li>
+            <li><button onclick="showYearly()">Yearly Progress</button></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <!-- Badge Display -->
+        <div id="badge" class="badge">Focus Student</div>
+
+        <!-- Task Matrix (For Daily Progress) -->
+        <div id="taskMatrix" class="task-matrix">
+            <h3>Today's Tasks</h3>
+            <table id="tasksTable">
+                <tr>
+                    <th>Task</th>
+                    <th>Status</th>
+                    <th>Score</th>
+                </tr>
+                <!-- Daily task data will be populated here dynamically -->
+            </table>
+        </div>
+
+        <!-- Chart for Progress -->
+        <canvas id="progressChart" width="400" height="200"></canvas>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>
